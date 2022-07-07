@@ -1,0 +1,135 @@
+.line{
+    border-bottom: 1px solid #ddd;
+}
+
+body{
+    background-color: rgb(132, 149, 201);
+}
+
+.mid{ /*중앙 네모칸*/
+    width: 500px; 
+    height: 750px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top:90px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 7px 14px 42px 3px rgba(32, 12, 213, 0.498);
+}
+
+.head{ /*제목*/
+    text-align: center; 
+    font-size: 60px;
+    color:rgb(41, 52, 98);
+}
+
+.timer{
+    
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-input-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.complete-all-btn {  /*할 일을 입력할때 체크표시를 눌러 추가할때*/
+    color: rgb(77, 152, 112);
+    min-width: none;
+    min-height: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;  
+}
+
+.todo-input {
+    width: 80%;
+    text-align: center;
+    border: 0;
+    outline: none;
+    font-size: 1.3rem;
+}
+
+.checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 50px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.todo-item.checked .checkbox{
+    border: 2px solid darkgray;
+    color: green;
+}
+
+input[type=checkbox] {
+
+    zoom: 1.4;
+    float: right;
+}
+
+input[type="text"]{
+    width: 385px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1.5em;
+    background: white;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+button{
+    width: 85px;
+    height: 40px;
+    font-size: 1.5em;
+    background-color: white;
+    border-radius: 4px;
+    outline: 0;
+    border: solid black;
+}
+
+.todolist{
+    background-color: white;
+    text-align: center;
+    padding: 10px 40px 10px 0px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+}
+
+a{
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+    
+}
+
+.delete{
+    color: rgb(245, 42, 42);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 2.2rem;  
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/Todo.css">
+    <link rel="icon" href="./../img/memo.png">
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="mid">
+
+       <div class="head">
+          <strong>TODO</strong>
+        </div>
+
+        <div class="timer">
+                 <h3><span id="day"></span> <span id="week"></span> <span style="color:rgb(84, 87, 87);  margin-right: 15px;" id="time"></span></h3>
+        </div>
+
+        <form class="todo-input-box" action="Todo.html" method="post">
+            <button class="complete-all-btn">✔</button>
+            <input type="text" class="todo-input" placeholder="해야 할 일을 입력해주세요." name="todo">
+        </form>
+                
+        <div class="todolist">
+            <ul></ul>
+            <a id="clear">전부삭제</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script>
+        //요일,날짜 나타나기
+        setInterval(function () {
+            $('#day').text(new Date().toLocaleDateString());
+        }, 1000);
+        setInterval(function () {
+            $('#week').text(new Date().toLocaleDateString('ko-KR', {
+                weekday :'long'
+            }));
+                
+        });
+        document.getElementById("day").style.color="rgb(84, 87, 87)";
+        document.getElementById("week").style.color="rgb(84, 87, 87)"; 
+        var now = new Date();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var time = hour + ":" + min ;
+        $("#time").text(time);
+    </script>
+    <script src="./../js/Todo.js"> </script> 
+</body>
+</html> 

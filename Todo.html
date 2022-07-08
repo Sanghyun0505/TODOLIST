@@ -60,7 +60,12 @@
         var hour = now.getHours();
         var min = now.getMinutes();
         var sec = now.getSeconds();
-        var time = hour + ":" + min ;
+        if(min<10){
+            var time =hour + ":" + "0"+min; 
+        }else{
+             var time = hour + ":" + min ;
+        }
+
         $("#time").text(time);
         
         $("#clean").click(function(){ //선택삭제

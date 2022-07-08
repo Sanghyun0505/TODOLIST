@@ -35,6 +35,9 @@
         <div class="todolist">
             <ul></ul>
             <a id="clear">전부삭제</a>
+            <div class="locate">
+                <a id="clean">선택삭제</a>
+            </div>
         </div>
     </div>
 
@@ -59,6 +62,10 @@
         var sec = now.getSeconds();
         var time = hour + ":" + min ;
         $("#time").text(time);
+        
+        $("#clean").click(function(){ //선택삭제
+            $("input:checked").parent().remove();
+        })
     </script>
     <script src="./../js/Todo.js"> </script> 
 </body>

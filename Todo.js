@@ -1,8 +1,6 @@
-/*js힘들어-*/
+/*js는 대부분 구글링이지만 찾기 힘들었따..*/
 
 init();
-
-const todo = e.target.nextSibling;
 
 function init(){
         document.querySelector('form').addEventListener('submit', addToDo);
@@ -12,7 +10,7 @@ function init(){
 
 function deleteOrCheck(e){
     if(e.target.className == 'delete')  
-        deleteToDo(e);
+        deleteToDo(e); // X 버튼을 누르면 목록에서 항목 삭제
     else {
         checkToDo(e); // 체크박스를 클릭한 경우 글씨 색을 연하게 바꿔준다.
     }
@@ -22,14 +20,14 @@ function clearTodoList(e){ //목록 전체 삭제하는 경우
     let ul = document.querySelector('ul').innerHTML = '';
 }
 
-function deleteToDo(e){ // X 버튼을 누르면 투두리스트항목 삭제.
+function deleteToDo(e){ // X 버튼을 누르면 목록에서 항목 삭제
     let remove = e.target.parentNode;
     let parentNode = remove.parentNode;
     parentNode.removeChild(remove);
 }
 
 
-function checkToDo(e){  // 체크박스를 클릭하면 글씨 색깔바꾸기.
+function checkToDo(e){  // 체크박스를 클릭한 경우 글씨 색을 연하게 바꿔준다.
     const todo = e.target.nextSibling;
     if(e.target.checked){
         todo.style.color = "#dddddd";
@@ -41,12 +39,13 @@ function checkToDo(e){  // 체크박스를 클릭하면 글씨 색깔바꾸기.
 
 
 
-function addToDo(e){ //새로운 할 일 추가하기
+function addToDo(e){ //새로운 할 일 추가하는 경우
     e.preventDefault();
     let toDoValue = document.querySelector('input');
-    if(toDoValue.value !== '')
+    if(toDoValue.value !== ''){
         addTask(toDoValue.value);
-        toDoValue.value = ''; //입력창 비우기
+        toDoValue.value = ''; //입력창 비워주기
+    }
 }
 
 function addTask(value){

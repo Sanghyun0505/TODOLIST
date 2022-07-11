@@ -51,7 +51,7 @@ function addToDo(e){ //새로운 할 일 추가하는 경우
 function addTask(value){
     let ul = document.querySelector('ul');
     let li = document.createElement('li');
-    li.innerHTML = `<span class="delete">x</span><input type="checkbox"><label>${value}</label>`;
+    //li.innerHTML = `<span class="delete">x</span><input type="checkbox"><label>${value}</label>`;
+    li.innerHTML = `<input type="checkbox"><label>${value}</label>`;
     ul.appendChild(li);
-    document.querySelector('.todolist').style.display = 'block';
 }

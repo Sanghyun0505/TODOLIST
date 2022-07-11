@@ -8,10 +8,10 @@ body{
 
 .mid{ /*중앙 네모칸*/
     width: 500px; 
-    height: 750px;
+    height: 835px;
     background-color: white;
     margin: 0 auto;
-    margin-top:90px;
+    margin-top:75px;
     text-align: center;
     border-radius: 30px;
     box-shadow: 7px 14px 42px 3px rgba(32, 12, 213, 0.498);
@@ -20,6 +20,7 @@ body{
 .head{ /*제목*/
     text-align: center; 
     font-size: 60px;
+    margin-bottom: 45px;
     color:rgb(41, 52, 98);
 }
 
